@@ -7,7 +7,7 @@ class SpringShellSamples < Formula
   
     bottle :unneeded
   
-    depends_on "homebrew-openjdk/adoptopenjdk8-jre"
+    depends_on "AdoptOpenJDK/homebrew-openjdk/adoptopenjdk8-jre"
   
     def install
       libexec.install "spring-shell-samples-#{version}.jar"
