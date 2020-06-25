@@ -3,17 +3,17 @@ class SpringShellSamples < Formula
     homepage "https://github.com/timothysparg/spring-shell"
     url "https://maven.pkg.github.com/timothysparg/spring-shell/coza/sparg/spring-shell-samples/1.0.1/spring-shell-samples-1.0.1.jar"
     sha256 "60d61d6899757ae96c6fb2f1f711466983943292214d0667a2ee2d798a715d79"
-    revision 1
+    version '1.0.1'
   
     bottle :unneeded
   
-    depends_on "openjdk@8"
+    depends_on "adoptopenjdk8-jre"
   
     def install
-      libexec.install "spring-shell-samples-1.0.1.jar"
+      libexec.install "spring-shell-samples-#{version}.jar"
       (bin/"spring-shell-samples").write <<~EOS
         #!/bin/bash
-        exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/spring-shell-samples-1.0.1.jar" "$@"
+        exec "#{Formula["adoptopenjdk8-jre"].opt_bin}/java" -jar "#{libexec}/spring-shell-samples-#{version}.jar" "$@"
       EOS
     end
   
