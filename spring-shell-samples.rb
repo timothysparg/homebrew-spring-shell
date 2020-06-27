@@ -7,13 +7,13 @@ class SpringShellSamples < Formula
   
     bottle :unneeded
   
-    depends_on "AdoptOpenJDK/openjdk/adoptopenjdk8-jre"
+    depends_on JavaRequirement
   
     def install
       libexec.install "spring-shell-samples-#{version}.jar"
       (bin/"spring-shell-samples").write <<~EOS
         #!/bin/bash
-        exec "#{Formula["adoptopenjdk8-jre"].opt_bin}/java" -jar "#{libexec}/spring-shell-samples-#{version}.jar" "$@"
+        exec "#{JavaRequirement.jdk_home}" -jar "#{libexec}/spring-shell-samples-#{version}.jar" "$@"
       EOS
     end
   
