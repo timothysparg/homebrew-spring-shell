@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'JavaRequirement'
 
 class SpringShellSamples < Formula
   desc 'Spring Shell Samples'
