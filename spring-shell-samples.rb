@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'JavaRequirement'
 
 class SpringShellSamples < Formula
   desc 'Spring Shell Samples'
@@ -10,7 +9,7 @@ class SpringShellSamples < Formula
 
   bottle :unneeded
 
-  depends_on JavaRequirement('1.8')
+  depends_on 'java == "1.8'
 
   def install
     libexec.install "spring-shell-samples-#{version}.jar"
