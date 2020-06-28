@@ -1,0 +1,16 @@
+PATH
+  remote: /Users/timsparg/src/github.com/homebrew/brew/Library/Homebrew
+  specs:
+    brew (0.0.1)
+
+GEM
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  brew!
+
+BUNDLED WITH
+   1.17.2
