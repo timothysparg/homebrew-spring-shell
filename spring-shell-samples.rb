@@ -9,9 +9,9 @@ class SpringShellSamples < Formula
 
   bottle :unneeded
 
-  depends_on java: '1.8'
-
   def install
+    ohai Caskroom.casks
+
     libexec.install "spring-shell-samples-#{version}.jar"
     (bin / 'spring-shell-samples').write <<~EOS
       #!/bin/bash
